@@ -14,54 +14,110 @@ class ProfileHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: compact ? CrossAxisAlignment.center : CrossAxisAlignment.start,
       children: [
-        Container(
-          width: compact ? 120 : 140,
-          height: compact ? 120 : 140,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            border: Border.all(color: Colors.white, width: 4),
-            boxShadow: [
-              BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 10, offset: const Offset(0, 5)),
-            ],
-            image: DecorationImage(image: NetworkImage(profile.avatarUrl), fit: BoxFit.cover),
-          ),
+        // Avatar with status badge
+        Stack(
+          children: [
+            Container(
+              width: compact ? 100 : 130,
+              height: compact ? 100 : 130,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Theme.of(context).colorScheme.primary,
+                    Theme.of(context).colorScheme.primary.withValues(alpha: 0.7),
+                  ],
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.3),
+                    blurRadius: 20,
+                    offset: const Offset(0, 10),
+                  ),
+                ],
+              ),
+              padding: const EdgeInsets.all(4),
+              child: Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.white, width: 3),
+                  image: DecorationImage(image: NetworkImage(profile.avatarUrl), fit: BoxFit.cover),
+                ),
+              ),
+            ),
+            // Open to work badge
+            if (profile.openToWork)
+              Positioned(
+                bottom: 0,
+                right: 0,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF22C55E),
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: Colors.white, width: 2),
+                  ),
+                  child: const Text(
+                    'Open',
+                    style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+          ],
         ),
         const SizedBox(height: 20),
+        // Name
         Text(
           profile.name,
-          style: Theme.of(context).textTheme.displayMedium?.copyWith(fontSize: compact ? 24 : 28),
+          style: Theme.of(context).textTheme.displayMedium?.copyWith(fontSize: compact ? 22 : 28),
           textAlign: compact ? TextAlign.center : TextAlign.left,
         ),
         const SizedBox(height: 8),
-        Text(
-          profile.title,
-          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-            color: Theme.of(context).colorScheme.secondary,
-            fontWeight: FontWeight.w600,
-            fontSize: compact ? 16 : 20,
+        // Title with accent
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Theme.of(context).colorScheme.secondary.withValues(alpha: 0.15),
+                Theme.of(context).colorScheme.secondary.withValues(alpha: 0.05),
+              ],
+            ),
+            borderRadius: BorderRadius.circular(8),
           ),
-          textAlign: compact ? TextAlign.center : TextAlign.left,
+          child: Text(
+            profile.title,
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+              color: Theme.of(context).colorScheme.secondary,
+              fontWeight: FontWeight.w600,
+            ),
+            textAlign: compact ? TextAlign.center : TextAlign.left,
+          ),
         ),
         const SizedBox(height: 16),
+        // Bio
         ConstrainedBox(
           constraints: BoxConstraints(maxWidth: compact ? 400 : double.infinity),
           child: Text(
             profile.bio,
-            style: Theme.of(context).textTheme.bodyLarge,
+            style: Theme.of(context).textTheme.bodyMedium,
             textAlign: compact ? TextAlign.center : TextAlign.left,
           ),
         ),
-        const SizedBox(height: 24),
+        const SizedBox(height: 20),
+        // Social icons
         Wrap(
-          spacing: 12,
+          spacing: 8,
           alignment: compact ? WrapAlignment.center : WrapAlignment.start,
-          children: profile.socials.map((s) => _buildSocialIcon(s)).toList(),
+          children: profile.socials.map((s) => _buildSocialButton(context, s)).toList(),
         ),
       ],
     );
   }
 
-  Widget _buildSocialIcon(Social social) {
+  Widget _buildSocialButton(BuildContext context, Social social) {
     IconData iconData;
     switch (social.icon.toLowerCase()) {
       case 'github':
@@ -80,13 +136,21 @@ class ProfileHeader extends StatelessWidget {
         iconData = FontAwesomeIcons.link;
     }
 
-    return IconButton(
-      onPressed: () => launchUrl(Uri.parse(social.url)),
-      icon: FaIcon(iconData, size: 24),
-      color: const Color(0xFF2C3E50),
-      tooltip: social.platform,
-      padding: EdgeInsets.zero,
-      constraints: const BoxConstraints(),
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: () => launchUrl(Uri.parse(social.url)),
+        borderRadius: BorderRadius.circular(12),
+        child: Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.08),
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.15)),
+          ),
+          child: FaIcon(iconData, size: 18, color: Theme.of(context).colorScheme.primary),
+        ),
+      ),
     );
   }
 }

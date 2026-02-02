@@ -5,15 +5,11 @@
         "title": "Computer Science",
         "bio": "Hello I'm Fajri Rinaldi Chan, I have 4+ years of experience in Flutter mobile development. Currently working as a Lecturer in Informatics and Director at Torkata Tech Solution. Passionate about teaching, technology, and building innovative solutions.",
         "location": "Padang, Sumatera Barat, Indonesia",
-        "email": "fajri.chan@example.com",
-        "phone": "+62 812 xxxx xxxx",
+        "email": "fajri@gariskode.com",
+        "phone": "+62 822 8835 8026",
         "website": "https://linkedin.com/in/fajri-chan",
         "avatarUrl": "https://i.pravatar.cc/300?u=fajri",
         "backgroundUrl": "https://picsum.photos/1200/300?random=fajri",
-        "openToWork": true,
-        "pronouns": "He/Him",
-        "connections": 224,
-        "followers": 238,
         "socials": [
             {
                 "platform": "LinkedIn",
@@ -30,7 +26,7 @@
     "experience": [
         {
             "company": "UIN Sjech M Djamil Djambek Bukittinggi",
-            "companyLogoUrl": "https://logo.clearbit.com/uin.ac.id",
+            "companyLogoUrl": "https://media.licdn.com/dms/image/v2/D560BAQH-Xc-FLRS_AQ/company-logo_100_100/company-logo_100_100/0/1667459101834/uin_smdd_bukittinggi_logo?e=1771459200&v=beta&t=al8RzcSHn-ARteNJ0ZNg0f5Es3utyw1GuqSI72OuBho",
             "location": "Bukittinggi, Sumatera Barat, Indonesia",
             "totalDuration": "2 bln",
             "roles": [
@@ -57,7 +53,7 @@
         },
         {
             "company": "Torkata Tech Solution",
-            "companyLogoUrl": "https://logo.clearbit.com/torkata.com",
+            "companyLogoUrl": "https://media.licdn.com/dms/image/v2/D560BAQFGOzyio-l0nw/company-logo_100_100/B56ZaVGKn1HUAU-/0/1746258147026?e=1771459200&v=beta&t=G3q2e5sNgnOeCTJeZioC7Vj3ZPhYSoXAxa72h0xXlu8",
             "location": "Padang, Sumatera Barat, Indonesia",
             "totalDuration": "5 bln",
             "roles": [
@@ -79,7 +75,7 @@
         },
         {
             "company": "Garis Kode",
-            "companyLogoUrl": "https://logo.clearbit.com/gariskode.com",
+            "companyLogoUrl": "https://media.licdn.com/dms/image/v2/D560BAQHpU2qtxcy7GQ/company-logo_100_100/company-logo_100_100/0/1690191706785?e=1771459200&v=beta&t=75CBpiyaHkvwpDXGsp4PKbSq29XGLVytIT-i6I7zXd0",
             "location": "Medan, Sumatera Utara, Indonesia",
             "totalDuration": "2 thn 1 bln",
             "roles": [
@@ -135,7 +131,7 @@
         },
         {
             "company": "ORBIT UIN Bukittinggi",
-            "companyLogoUrl": "https://logo.clearbit.com/uin.ac.id",
+            "companyLogoUrl": "https://media.licdn.com/dms/image/v2/D4D0BAQFWRiCoyBD6Hg/company-logo_100_100/company-logo_100_100/0/1681796732298?e=1771459200&v=beta&t=2_YiG7A_P6JZM9c-WQsdiIM77CpZ9eMj9Gcjq4WuwVs",
             "location": "Bukittinggi, Sumatera Barat, Indonesia",
             "totalDuration": "10 bln",
             "roles": [
@@ -168,7 +164,7 @@
             "degree": "Master's degree",
             "fieldOfStudy": "Informatics Engineering",
             "institution": "UNIVERSITAS PUTRA INDONESIA YPTK",
-            "logoUrl": "https://logo.clearbit.com/upiyptk.ac.id",
+            "logoUrl": "https://media.licdn.com/dms/image/v2/D560BAQFYEQbP2iJYFg/company-logo_100_100/B56Zh37bzJH0AU-/0/1754358731754/universitas_putra_indonesia_yptk_logo?e=1771459200&v=beta&t=Q1Kb8pGnj5sP-U6EWnHYQdmCUHlewfaTru87fa4z0B8",
             "location": "Padang, Indonesia",
             "startDate": "Mei 2024",
             "endDate": "Okt 2025",
@@ -182,7 +178,7 @@
             "degree": "Bachelor's degree",
             "fieldOfStudy": "Informatics and Computer Engineering Education",
             "institution": "UIN Sjech M Djamil Djambek Bukittinggi",
-            "logoUrl": "https://logo.clearbit.com/uin.ac.id",
+            "logoUrl": "https://media.licdn.com/dms/image/v2/D560BAQH-Xc-FLRS_AQ/company-logo_100_100/company-logo_100_100/0/1667459101834/uin_smdd_bukittinggi_logo?e=1771459200&v=beta&t=al8RzcSHn-ARteNJ0ZNg0f5Es3utyw1GuqSI72OuBho",
             "location": "Bukittinggi, Indonesia",
             "startDate": "Sep 2020",
             "endDate": "Apr 2024",
