@@ -10,6 +10,8 @@ class ExperienceItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final hasMultipleRoles = experience.roles.length > 1;
+
     return Container(
       margin: const EdgeInsets.only(bottom: 24),
       child: Row(
@@ -42,62 +44,99 @@ class ExperienceItem extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(experience.role, style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontSize: 18)),
-                const SizedBox(height: 4),
-                Text(
-                  experience.company,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    color: Theme.of(context).colorScheme.secondary,
-                    fontWeight: FontWeight.w600,
+                // Company name and total duration
+                Text(experience.company, style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontSize: 18)),
+                if (hasMultipleRoles) ...[
+                  const SizedBox(height: 2),
+                  Text(
+                    "${experience.totalDuration} • ${experience.location}",
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.grey[600]),
                   ),
+                ],
+                const SizedBox(height: 8),
+                // Roles
+                ...experience.roles.asMap().entries.map((entry) {
+                  final index = entry.key;
+                  final role = entry.value;
+                  final isLastRole = index == experience.roles.length - 1;
+                  return _buildRoleItem(context, role, hasMultipleRoles, isLastRole);
+                }),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildRoleItem(BuildContext context, ExperienceRole role, bool hasMultipleRoles, bool isLastRole) {
+    return Container(
+      margin: EdgeInsets.only(bottom: isLastRole ? 0 : 16),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Timeline indicator for multiple roles
+          if (hasMultipleRoles) ...[
+            Column(
+              children: [
+                Container(
+                  width: 8,
+                  height: 8,
+                  decoration: BoxDecoration(color: Theme.of(context).primaryColor, shape: BoxShape.circle),
                 ),
-                const SizedBox(height: 4),
-                // Employment details row
+                if (!isLastRole) Container(width: 2, height: 80, color: Colors.grey[300]),
+              ],
+            ),
+            const SizedBox(width: 12),
+          ],
+          // Role content
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(role.title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w600)),
+                const SizedBox(height: 2),
+                // Employment details
                 Wrap(
                   spacing: 8,
-                  runSpacing: 4,
+                  runSpacing: 2,
                   children: [
-                    if (experience.employmentType.isNotEmpty)
-                      _buildTag(context, experience.employmentType, Icons.work_outline),
-                    if (experience.location.isNotEmpty)
-                      _buildTag(context, experience.location, Icons.location_on_outlined),
-                    if (experience.locationType.isNotEmpty)
-                      _buildTag(context, experience.locationType, Icons.home_work_outlined),
+                    if (role.employmentType.isNotEmpty) _buildTag(context, role.employmentType),
+                    if (!hasMultipleRoles && experience.location.isNotEmpty) _buildTag(context, experience.location),
+                    if (role.locationType.isNotEmpty) _buildTag(context, role.locationType),
                   ],
                 ),
-                const SizedBox(height: 4),
+                const SizedBox(height: 2),
                 Text(
-                  "${experience.startDate} - ${experience.endDate}",
-                  style: Theme.of(
-                    context,
-                  ).textTheme.bodySmall?.copyWith(color: Colors.grey[600], fontWeight: FontWeight.w500),
+                  "${role.startDate} - ${role.endDate} • ${role.duration}",
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.grey[600]),
                 ),
-                if (experience.description.isNotEmpty) ...[
-                  const SizedBox(height: 8),
+                if (role.description.isNotEmpty) ...[
+                  const SizedBox(height: 6),
                   Text(
-                    experience.description,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                    maxLines: 3,
+                    role.description,
+                    style: Theme.of(context).textTheme.bodySmall,
+                    maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
                 ],
-                // Highlights (limited to 3)
-                if (experience.highlights.isNotEmpty) ...[
-                  const SizedBox(height: 8),
-                  ...experience.highlights
-                      .take(3)
+                // Highlights
+                if (role.highlights.isNotEmpty) ...[
+                  const SizedBox(height: 6),
+                  ...role.highlights
+                      .take(2)
                       .map(
                         (h) => Padding(
                           padding: const EdgeInsets.only(bottom: 2),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Icon(Icons.check_circle, size: 14, color: Theme.of(context).colorScheme.secondary),
-                              const SizedBox(width: 6),
+                              Icon(Icons.check_circle, size: 12, color: Theme.of(context).colorScheme.secondary),
+                              const SizedBox(width: 4),
                               Expanded(
                                 child: Text(
                                   h,
-                                  style: Theme.of(context).textTheme.bodySmall,
+                                  style: Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 11),
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                 ),
@@ -107,13 +146,13 @@ class ExperienceItem extends StatelessWidget {
                         ),
                       ),
                 ],
-                // Skills used (limited to 4)
-                if (experience.skills.isNotEmpty) ...[
-                  const SizedBox(height: 8),
+                // Skills
+                if (role.skills.isNotEmpty) ...[
+                  const SizedBox(height: 6),
                   Wrap(
-                    spacing: 6,
+                    spacing: 4,
                     runSpacing: 4,
-                    children: experience.skills.take(4).map((s) => _buildSkillChip(context, s)).toList(),
+                    children: role.skills.take(3).map((s) => _buildSkillChip(context, s)).toList(),
                   ),
                 ],
               ],
@@ -124,20 +163,13 @@ class ExperienceItem extends StatelessWidget {
     );
   }
 
-  Widget _buildTag(BuildContext context, String text, IconData icon) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Icon(icon, size: 12, color: Colors.grey[600]),
-        const SizedBox(width: 4),
-        Text(text, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.grey[600], fontSize: 11)),
-      ],
-    );
+  Widget _buildTag(BuildContext context, String text) {
+    return Text(text, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.grey[600], fontSize: 11));
   }
 
   Widget _buildSkillChip(BuildContext context, String skill) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor.withValues(alpha: 0.08),
         borderRadius: BorderRadius.circular(4),

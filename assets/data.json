@@ -29,121 +29,137 @@
     },
     "experience": [
         {
-            "role": "Lecturer (Dosen)",
             "company": "UIN Sjech M Djamil Djambek Bukittinggi",
             "companyLogoUrl": "https://logo.clearbit.com/uin.ac.id",
             "location": "Bukittinggi, Sumatera Barat, Indonesia",
-            "locationType": "On-site",
-            "employmentType": "Part-time",
-            "startDate": "Jan 2026",
-            "endDate": "Present",
-            "description": "Lecturer in Informatics with experience in teaching and academic development. Actively involved in delivering several core and advanced courses in the field of computer science. Teaching approach focuses on building strong conceptual understanding while guiding students toward practical implementation through projects, case studies, and applied problem-solving.",
-            "highlights": [
-                "Teaching Robotics course",
-                "Teaching Parallel and Distributed Computing",
-                "Teaching Database Systems",
-                "Teaching Artificial Intelligence"
-            ],
-            "skills": [
-                "Robotics",
-                "Computer Science",
-                "Database Systems",
-                "Artificial Intelligence"
+            "totalDuration": "2 bln",
+            "roles": [
+                {
+                    "title": "Lecturer (Dosen)",
+                    "employmentType": "Part-time",
+                    "locationType": "On-site",
+                    "startDate": "Jan 2026",
+                    "endDate": "Present",
+                    "duration": "2 bln",
+                    "description": "Lecturer in Informatics with experience in teaching and academic development. Actively involved in delivering several core and advanced courses in the field of computer science. Teaching approach focuses on building strong conceptual understanding while guiding students toward practical implementation.",
+                    "highlights": [
+                        "Teaching Robotics course",
+                        "Teaching Parallel and Distributed Computing",
+                        "Teaching Database Systems",
+                        "Teaching Artificial Intelligence"
+                    ],
+                    "skills": [
+                        "Robotics",
+                        "Computer Science"
+                    ]
+                }
             ]
         },
         {
-            "role": "Director",
             "company": "Torkata Tech Solution",
             "companyLogoUrl": "https://logo.clearbit.com/torkata.com",
             "location": "Padang, Sumatera Barat, Indonesia",
-            "locationType": "On-site",
-            "employmentType": "Full-time",
-            "startDate": "Oct 2025",
-            "endDate": "Present",
-            "description": "Leading Torkata Tech Solution, a technology company focused on providing innovative IT solutions and services.",
-            "highlights": [],
-            "skills": [
-                "Leadership",
-                "Business Development",
-                "Technology Strategy"
+            "totalDuration": "5 bln",
+            "roles": [
+                {
+                    "title": "Director",
+                    "employmentType": "Full-time",
+                    "locationType": "On-site",
+                    "startDate": "Okt 2025",
+                    "endDate": "Present",
+                    "duration": "5 bln",
+                    "description": "Leading Torkata Tech Solution, a technology company focused on providing innovative IT solutions and services.",
+                    "highlights": [],
+                    "skills": [
+                        "Leadership",
+                        "Business Development"
+                    ]
+                }
             ]
         },
         {
-            "role": "Project Manager",
             "company": "Garis Kode",
             "companyLogoUrl": "https://logo.clearbit.com/gariskode.com",
             "location": "Medan, Sumatera Utara, Indonesia",
-            "locationType": "Remote",
-            "employmentType": "Part-time",
-            "startDate": "Sep 2024",
-            "endDate": "Jul 2025",
-            "description": "Managing projects and coordinating development efforts at Garis Kode, ensuring timely delivery and quality outputs.",
-            "highlights": [],
-            "skills": [
-                "Project Management",
-                "Agile",
-                "Team Leadership"
+            "totalDuration": "2 thn 1 bln",
+            "roles": [
+                {
+                    "title": "Project Manager",
+                    "employmentType": "Part-time",
+                    "locationType": "Remote",
+                    "startDate": "Sep 2024",
+                    "endDate": "Jul 2025",
+                    "duration": "11 bln",
+                    "description": "Managing projects and coordinating development efforts, ensuring timely delivery and quality outputs.",
+                    "highlights": [],
+                    "skills": [
+                        "Project Management",
+                        "Agile"
+                    ]
+                },
+                {
+                    "title": "Mobile Engineer",
+                    "employmentType": "Part-time",
+                    "locationType": "Remote",
+                    "startDate": "Mei 2024",
+                    "endDate": "Jul 2025",
+                    "duration": "1 thn 3 bln",
+                    "description": "Developing mobile applications using Flutter framework, implementing clean architecture and best practices.",
+                    "highlights": [],
+                    "skills": [
+                        "Flutter",
+                        "Dart",
+                        "Mobile Development"
+                    ]
+                },
+                {
+                    "title": "Copywriter",
+                    "employmentType": "Part-time",
+                    "locationType": "Remote",
+                    "startDate": "Jul 2023",
+                    "endDate": "Mei 2024",
+                    "duration": "11 bln",
+                    "description": "Content writer focusing on programming and technology topics on the 'Garis Kode' blog platform, providing in-depth information and insights to readers.",
+                    "highlights": [
+                        "Writing technical articles about programming",
+                        "SEO optimization for blog content",
+                        "Creating educational content"
+                    ],
+                    "skills": [
+                        "SEO",
+                        "Content Writing",
+                        "Technical Writing"
+                    ]
+                }
             ]
         },
         {
-            "role": "Mobile Engineer",
-            "company": "Garis Kode",
-            "companyLogoUrl": "https://logo.clearbit.com/gariskode.com",
-            "location": "Medan, Sumatera Utara, Indonesia",
-            "locationType": "Remote",
-            "employmentType": "Part-time",
-            "startDate": "May 2024",
-            "endDate": "Jul 2025",
-            "description": "Developing mobile applications using Flutter framework, implementing clean architecture and best practices.",
-            "highlights": [],
-            "skills": [
-                "Flutter",
-                "Dart",
-                "Mobile Development"
-            ]
-        },
-        {
-            "role": "Copywriter",
-            "company": "Garis Kode",
-            "companyLogoUrl": "https://logo.clearbit.com/gariskode.com",
-            "location": "Medan, Sumatera Utara, Indonesia",
-            "locationType": "Remote",
-            "employmentType": "Part-time",
-            "startDate": "Jul 2023",
-            "endDate": "May 2024",
-            "description": "Content writer focusing on programming and technology topics on the 'Garis Kode' blog platform, providing in-depth information and insights to readers. Presenting detailed and informative articles about programming languages, latest technological concepts, and recent developments in the IT world.",
-            "highlights": [
-                "Writing technical articles about programming",
-                "SEO optimization for blog content",
-                "Creating educational content"
-            ],
-            "skills": [
-                "Search Engine Optimization (SEO)",
-                "Content Writing",
-                "Technical Writing"
-            ]
-        },
-        {
-            "role": "Tech Lead",
             "company": "ORBIT UIN Bukittinggi",
             "companyLogoUrl": "https://logo.clearbit.com/uin.ac.id",
             "location": "Bukittinggi, Sumatera Barat, Indonesia",
-            "locationType": "On-site",
-            "employmentType": "Part-time",
-            "startDate": "Mar 2023",
-            "endDate": "Dec 2023",
-            "description": "Responsible for providing technical guidance, coordinating development efforts, and leading colleagues in creating innovative and effective technological solutions. Accountable for designing system architecture, making intelligent technical decisions, ensuring high-quality code, and ensuring that projects run according to schedule and budget.",
-            "highlights": [
-                "Building the Orbit management and administration information system using Flutter for Mobile Application",
-                "Using Codeigniter4 framework for Frontend Web and NodeJS for Backend",
-                "Building a web landing page and news website",
-                "Creating an artificial intelligence robot named 'TEROBIK'"
-            ],
-            "skills": [
-                "Flutter",
-                "CodeIgniter",
-                "Node.js",
-                "System Architecture"
+            "totalDuration": "10 bln",
+            "roles": [
+                {
+                    "title": "Tech Lead",
+                    "employmentType": "Part-time",
+                    "locationType": "On-site",
+                    "startDate": "Mar 2023",
+                    "endDate": "Des 2023",
+                    "duration": "10 bln",
+                    "description": "Responsible for providing technical guidance, coordinating development efforts, and leading colleagues in creating innovative and effective technological solutions.",
+                    "highlights": [
+                        "Building the Orbit management and administration information system using Flutter for Mobile Application",
+                        "Using Codeigniter4 framework for Frontend Web and NodeJS for Backend",
+                        "Building a web landing page and news website",
+                        "Creating an artificial intelligence robot named 'TEROBIK'"
+                    ],
+                    "skills": [
+                        "Flutter",
+                        "CodeIgniter",
+                        "Node.js",
+                        "System Architecture"
+                    ]
+                }
             ]
         }
     ],
@@ -154,8 +170,8 @@
             "institution": "UNIVERSITAS PUTRA INDONESIA YPTK",
             "logoUrl": "https://logo.clearbit.com/upiyptk.ac.id",
             "location": "Padang, Indonesia",
-            "startDate": "May 2024",
-            "endDate": "Oct 2025",
+            "startDate": "Mei 2024",
+            "endDate": "Okt 2025",
             "gpa": "3.86",
             "maxGpa": "4.00",
             "description": "Pursuing Master's degree in Informatics Engineering with focus on advanced computing concepts and research.",
@@ -227,7 +243,7 @@
             "endorsements": 4
         },
         {
-            "name": "Search Engine Optimization (SEO)",
+            "name": "SEO",
             "level": "Intermediate",
             "endorsements": 3
         },
@@ -240,12 +256,12 @@
     "projects": [
         {
             "name": "SIMA-ORBIT Mobile",
-            "description": "Sistem Informasi Manajemen dan Administrasi (SIMA) ORBIT is an application designed to assist in the management and administration of the IT-based Small and Medium Enterprises (UKM) of the ORBIT Organization. This application can be used for various purposes, including managing executive, alumni, and member data, as well as overseeing organized activities.",
+            "description": "Sistem Informasi Manajemen dan Administrasi (SIMA) ORBIT is an application designed to assist in the management and administration of the IT-based organization. This application can be used for managing executive, alumni, and member data, as well as overseeing organized activities.",
             "imageUrl": "https://picsum.photos/400/300?random=sima",
             "link": "",
             "demoUrl": "",
             "startDate": "Mar 2023",
-            "endDate": "Dec 2023",
+            "endDate": "Des 2023",
             "technologies": [
                 "Flutter",
                 "Dart",
@@ -259,7 +275,7 @@
         },
         {
             "name": "Chatery WhatsApp API",
-            "description": "An alternative WhatsApp API solution with n8n integration support. Features multi-session support, real-time WebSocket events, text/media/group message handling, clean API structure, and authentication mechanism for secure API access.",
+            "description": "An alternative WhatsApp API solution with n8n integration support. Features multi-session support, real-time WebSocket events, text/media/group message handling, clean API structure, and authentication mechanism.",
             "imageUrl": "https://picsum.photos/400/300?random=chatery",
             "link": "https://github.com/fajri-chan/chatery",
             "demoUrl": "https://docs.chatery.app/",
@@ -332,15 +348,15 @@
             "name": "Organisasi berbasis IT (ORBIT) UIN Sjech M.Djamil Djambek Bukittinggi",
             "logoUrl": "https://logo.clearbit.com/uin.ac.id",
             "startDate": "Jan 2023",
-            "endDate": "Dec 2023",
+            "endDate": "Des 2023",
             "description": "Leading the Robotics division of the IT-based organization at UIN Bukittinggi."
         },
         {
             "role": "P. Muda Robotik",
             "name": "Organisasi berbasis IT (ORBIT) UIN Sjech M.Djamil Djambek Bukittinggi",
             "logoUrl": "https://logo.clearbit.com/uin.ac.id",
-            "startDate": "Oct 2022",
-            "endDate": "Dec 2022",
+            "startDate": "Okt 2022",
+            "endDate": "Des 2022",
             "description": "Junior member of the Robotics division."
         }
     ],
@@ -357,7 +373,7 @@
             "issuer": "The 4th Bukittinggi International Conference on Education (BICED) 2023",
             "issuerLogoUrl": "https://logo.clearbit.com/uin.ac.id",
             "date": "Sep 2023",
-            "description": "Presented at The 4th Bukittinggi International Conference on Education with theme 'The Impact of Technology on Education and Social Dynamics'. The conference was organized by Faculty of Education and Teaching State Islamic University Sjech M. Djamil Djambek Bukittinggi."
+            "description": "Presented at The 4th Bukittinggi International Conference on Education with theme 'The Impact of Technology on Education and Social Dynamics'."
         }
     ],
     "publications": [
@@ -367,15 +383,15 @@
             "publisherLogoUrl": "https://logo.clearbit.com/lakeisha.id",
             "date": "Jul 2025",
             "url": "",
-            "description": "Buku bahan ajar yang membekali pembaca dengan pemahaman mendalam mengenai gelombang transformasi digital dalam konteks visi Society 5.0. Disusun secara sistematis mulai dari konsep dasar, perkembangan Society 5.0, pemanfaatan teknologi kunci, inovasi model bisnis digital hingga strategi sukses, tantangan dan etika bisnis digital."
+            "description": "Buku bahan ajar yang membekali pembaca dengan pemahaman mendalam mengenai gelombang transformasi digital dalam konteks visi Society 5.0."
         },
         {
             "title": "Pemrograman Dasar Python Web Menggunakan Framework Django Untuk Pemula",
             "publisher": "CV. Penerbit Lakeisha",
             "publisherLogoUrl": "https://logo.clearbit.com/lakeisha.id",
-            "date": "Oct 2023",
+            "date": "Okt 2023",
             "url": "",
-            "description": "Buku ini ditujukan untuk pemula yang ingin mempelajari dasar-dasar pemrograman dengan menggunakan bahasa pemrograman Python dan database MySQL. Memberikan pengantar yang komprehensif dan langkah-demi-langkah dalam mempelajari Python, Django framework, dan MySQL database."
+            "description": "Buku untuk pemula yang ingin mempelajari dasar-dasar pemrograman dengan Python dan MySQL."
         }
     ],
     "volunteering": [],

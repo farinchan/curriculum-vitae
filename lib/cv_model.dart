@@ -117,42 +117,62 @@ class Social {
 }
 
 class Experience {
-  final String role;
   final String company;
   final String companyLogoUrl;
   final String location;
-  final String locationType;
+  final String totalDuration;
+  final List<ExperienceRole> roles;
+
+  Experience({
+    required this.company,
+    required this.companyLogoUrl,
+    required this.location,
+    required this.totalDuration,
+    required this.roles,
+  });
+
+  factory Experience.fromJson(Map<String, dynamic> json) {
+    return Experience(
+      company: json['company'] ?? '',
+      companyLogoUrl: json['companyLogoUrl'] ?? '',
+      location: json['location'] ?? '',
+      totalDuration: json['totalDuration'] ?? '',
+      roles: (json['roles'] as List?)?.map((e) => ExperienceRole.fromJson(e)).toList() ?? [],
+    );
+  }
+}
+
+class ExperienceRole {
+  final String title;
   final String employmentType;
+  final String locationType;
   final String startDate;
   final String endDate;
+  final String duration;
   final String description;
   final List<String> highlights;
   final List<String> skills;
 
-  Experience({
-    required this.role,
-    required this.company,
-    required this.companyLogoUrl,
-    required this.location,
-    required this.locationType,
+  ExperienceRole({
+    required this.title,
     required this.employmentType,
+    required this.locationType,
     required this.startDate,
     required this.endDate,
+    required this.duration,
     required this.description,
     required this.highlights,
     required this.skills,
   });
 
-  factory Experience.fromJson(Map<String, dynamic> json) {
-    return Experience(
-      role: json['role'] ?? '',
-      company: json['company'] ?? '',
-      companyLogoUrl: json['companyLogoUrl'] ?? '',
-      location: json['location'] ?? '',
-      locationType: json['locationType'] ?? '',
+  factory ExperienceRole.fromJson(Map<String, dynamic> json) {
+    return ExperienceRole(
+      title: json['title'] ?? '',
       employmentType: json['employmentType'] ?? '',
+      locationType: json['locationType'] ?? '',
       startDate: json['startDate'] ?? '',
       endDate: json['endDate'] ?? '',
+      duration: json['duration'] ?? '',
       description: json['description'] ?? '',
       highlights: List<String>.from(json['highlights'] ?? []),
       skills: List<String>.from(json['skills'] ?? []),
