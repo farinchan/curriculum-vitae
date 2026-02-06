@@ -93,7 +93,7 @@ pipeline {
             steps {
                 echo '🏗️ Building Flutter Web application...'
                 sh '''
-                    flutter build web --release --web-renderer html --base-href "/"
+                    flutter build web --release --base-href "/"
                 '''
             }
         }
