@@ -117,7 +117,7 @@ pipeline {
     
     post {
         success {
-            echo '✅ Build completed successfully!'
+            echo '✅ Build completed successfully !'
             echo "📦 Artifact: ${ARTIFACT_NAME}-${BUILD_NUMBER}.tar.gz"
         }
         failure {
